@@ -9,7 +9,7 @@ Due to a memory issue, a single head dot-product attention is used as opposed to
 
 Currently, the best model reaches EM/F1 = 70.0/79.4 in 60k steps (about 6 hours with bucket / 8 hours without bucket in a GTX1080). Detailed results are listed below.
 
-![Alt text](/../master/screenshots/Screen Shot 2018-09-03 at 8.53.06 PM.png?raw=true "Network Outline")
+![Alt text](/../master/screenshots/three_attention_with_elmo.png?raw=true "Network Outline")
 
 ## Dataset
 The dataset used for this task is [Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/).
