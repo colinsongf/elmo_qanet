@@ -1,5 +1,5 @@
 # Three-attention QANet with elmo
-A Tensorflow implementation of three attention with elmo model.
+This is a tensorflow implementation of three attention with elmo model. QANet paper is rank
 
 ![Alt text](/../master/screenshots/three_attention_with_elmo.png?raw=true "Network Outline")
 
@@ -15,8 +15,10 @@ Pretrained [GloVe embeddings](https://nlp.stanford.edu/projects/glove/) obtained
   * spacy==2.0.9 (only if you want to load the [pretrained model](https://drive.google.com/open?id=1gJtcPBNuDr9_2LuP_4x_4VN6_5fQCdfB), otherwise lower versions are fine)
   * bottle (only for demo)
 
-## Usage
-To download and preprocess the data, run
+## Prepare
+(1) To download [Qangaroo Dataset](http://qangaroo.cs.ucl.ac.uk/index.html) first.
+
+and preprocess the data, run
 
 ```bash
 # download SQuAD and Glove
