@@ -35,11 +35,11 @@ P.S. "lm_weights.hdf5" file is needed to generate by yourself. About how to gene
 (5) To run the command "python config.py --mode prepro" to generate preprocessed dataset files. You need to specify the elmo required files which are listed in (4). In config.py, some parameters should be set based on your directories. And many hyper-parameters can be adjusted to get better performance. 
 
 ## Train
-To run the command "python config.py --mode train" to train the model. During the training process, the classification accuracy of fixed 100 * batch_size training samples and all dev samples are printed after every epoch.
+To run the command "python config.py --mode train" to train the model. During the training process, the classification accuracy in part training dataset (fixed 100 * batch_size training samples) and the whole dev dataset will be printed after every epoch.
 
-P.S. Because the number of training samples is large (about 43, 000), calculating the performance of all training samples after every epoch is slow.
+P.S. Because the number of training samples is large (about 43, 000), calculating the performance in the whole training dataset after every epoch is slow.
 
 ## Test
-To run the command "python config.py --mode train" to train the model.
+To run the command "python config.py --mode train" to test the model. The classification accuracy in test dataset will be printed.
 
 
