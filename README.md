@@ -15,8 +15,13 @@ Pretrained [GloVe embeddings](https://nlp.stanford.edu/projects/glove/) obtained
   * spacy==2.0.9 (only if you want to load the [pretrained model](https://drive.google.com/open?id=1gJtcPBNuDr9_2LuP_4x_4VN6_5fQCdfB), otherwise lower versions are fine)
   * bottle (only for demo)
 
-## Prepare
-(1) To download [Qangaroo Dataset](http://qangaroo.cs.ucl.ac.uk/index.html) first.
+## Preprocessing
+(1) To download [Qangaroo Dataset](http://qangaroo.cs.ucl.ac.uk/index.html) first. After decompression, we use unmask train and dev dataset files (qangaroo_v1.1/wikihop/train.json and qangaroo_v1.1/wikihop/dev.json).
+(2) To run filtering data python file (qangaroo2squad_preprocess.py). And It can also transfer qangaroo format to [squad 1.1](https://rajpurkar.github.io/SQuAD-explorer/) format dataset files. Here you need to set input file variables (train_in and dev_in) to two dataset files described in (1). And you need to set output file variables (train_out and dev_out) and then you can get two json filtered [squad 1.1](https://rajpurkar.github.io/SQuAD-explorer/) format dataset files. 
+The filtering straties for train and dev dataset files are as following:
+Train: We only keep the sentences containing question and answer;
+Dev: We keep the sentences containing question and answer candidates.
+(3) Run the command "python config.py --mode prepro" to
 
 and preprocess the data, run
 
