@@ -32,9 +32,14 @@ Dev: We keep the sentences containing question and answer candidates.
 
 P.S. "lm_weights.hdf5" file is needed to generate by yourself. About how to generate please refer to [bilm-tf](https://github.com/allenai/bilm-tf).
 
-(5) Run the command "python config.py --mode prepro" to generate preprocessed dataset files. You need to specify the elmo required files which are listed in (4). In config.py, parameters should be set according to your machine.
+(5) To run the command "python config.py --mode prepro" to generate preprocessed dataset files. You need to specify the elmo required files which are listed in (4). In config.py, some parameters should be set based on your directories. And many hyper-parameters can be adjusted to get better performance. 
 
+## Train
+To run the command "python config.py --mode train" to train the model. During the training process, the classification accuracy of fixed 100 * batch_size training samples and all dev samples are printed after every epoch.
 
+P.S. Because the number of training samples is large (about 43, 000), calculating the performance of all training samples after every epoch is slow.
 
+## Test
+To run the command "python config.py --mode train" to train the model.
 
 
